@@ -81,6 +81,7 @@ function dfs(tree, stack = []) {
   console.log(stack.pop());
 }
 
+// BFS Iterative 
 function bfs(tree) {
   tree = tree.root
   let queue = [tree];
