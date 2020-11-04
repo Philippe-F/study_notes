@@ -35,6 +35,13 @@ class Tree {
   }
 }
 
+function createTree(tree, arr) {
+  if (arr.length === 0) return tree;
+  createTree(tree, arr.slice(0, arr.length - 1))
+  add(tree, arr[arr.length - 1])
+  return tree
+}
+
 // add a node without a Tree class
 function add(tree, value) {
   let node = new TreeNode(value);
