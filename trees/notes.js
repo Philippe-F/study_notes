@@ -80,3 +80,16 @@ function dfs(tree, stack = []) {
   dfs(tree.right, stack);
   console.log(stack.pop());
 }
+
+function bfs(tree) {
+  tree = tree.root
+  let queue = [tree];
+  while (queue.length) {
+    let node = queue.shift();
+
+    console.log(node.val);
+
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+}
