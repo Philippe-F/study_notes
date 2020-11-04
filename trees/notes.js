@@ -34,3 +34,30 @@ class Tree {
     }
   }
 }
+
+function add(tree, value) {
+  let node = new TreeNode(value);
+
+  if (!tree.root) {
+    tree.root = node;
+  } else {
+    let currParent = tree.root,
+      branch;
+
+    while (currParent) {
+      branch = value < currParent.val ? 'left' : 'right';
+
+      if (!currParent[branch]) {
+        break;
+      }
+
+      currParent = currParent[branch];
+    }
+
+    node.parent = currParent;
+    currParent[branch] = node;
+    return tree
+  }
+
+  return tree;
+};
