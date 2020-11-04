@@ -71,6 +71,7 @@ function add(tree, value) {
   return tree;
 };
 
+// DFS Recursive
 function dfs(tree, stack = []) {
   if (!stack.length) tree = tree.root;
   if (!tree) return;
