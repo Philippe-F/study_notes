@@ -35,6 +35,7 @@ class Tree {
   }
 }
 
+// add a node without a Tree class
 function add(tree, value) {
   let node = new TreeNode(value);
 
