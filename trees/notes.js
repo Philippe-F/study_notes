@@ -70,3 +70,12 @@ function add(tree, value) {
 
   return tree;
 };
+
+function dfs(tree, stack = []) {
+  if (!stack.length) tree = tree.root;
+  if (!tree) return;
+  stack.push(tree.val);
+  dfs(tree.left, stack);
+  dfs(tree.right, stack);
+  console.log(stack.pop());
+}
