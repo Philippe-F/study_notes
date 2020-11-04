@@ -35,6 +35,7 @@ class Tree {
   }
 }
 
+// Create a tree
 function createTree(tree, arr) {
   if (arr.length === 0) return tree;
   createTree(tree, arr.slice(0, arr.length - 1))
