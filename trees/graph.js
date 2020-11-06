@@ -23,6 +23,7 @@ class Graph {
     } else {
       let queue = [...this.root.children];
 
+      // BFS to find a node
       while (queue.length) {
         let vertex = queue.shift();
 
