@@ -6,3 +6,8 @@ class GraphNode {
   }
 }
 
+class Graph {
+  constructor() {
+    this.root = null;
+  }
+}
