@@ -1,6 +1,7 @@
 class TreeNode {
   constructor(value) {
     this.val = value;
+    // remove parent
     this.parent = this.left = this.right = null;
   }
 }
@@ -10,6 +11,7 @@ class Tree {
     this.root = null;
   }
 
+  // change to insert
   add(value) {
     let node = new TreeNode(value);
     if (!this.root) {
@@ -29,7 +31,7 @@ class Tree {
         currParent = currParent[branch];
       }
       // set the parent variable on the new Node 
-      node.parent = currParent;
+      // node.parent = currParent;
       currParent[branch] = node;
     }
   }
