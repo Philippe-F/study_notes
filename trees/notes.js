@@ -2,7 +2,7 @@ class TreeNode {
   constructor(value) {
     this.val = value;
     // remove parent
-    this.parent = this.left = this.right = null;
+    this.left = this.right = null;
   }
 }
 
