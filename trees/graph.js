@@ -49,6 +49,7 @@ var cloneGraph = function (node) {
     if (!node) return null;
     if (!newGraph[node.val]) {
       newGraph[node.val] = new Node(node.val);
+      // pass each neighbor into cloneNode to create a deepdup of neighbors
       newGraph[node.val].neighbors = node.neighbors.map(ele => cloneNode(ele));
     }
 
