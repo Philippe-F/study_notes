@@ -96,3 +96,24 @@ function bfs(tree) {
     if (node.right) queue.push(node.right);
   }
 }
+
+
+var findTilt = function (root) {
+  let total = 0;
+
+  findSum(root);
+  return total;
+
+  function findSum(node) {
+    if (!node) return 0;
+
+    const leftSum = findSum(node.left),
+      rightSum = findSum(node.right);
+
+    const sum = leftSum + rightSum + node.val;
+
+    total += Math.abs(leftSum - rightSum);
+
+    return sum;
+  }
+};
