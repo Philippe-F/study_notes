@@ -40,3 +40,20 @@ class Graph {
     }
   }
 }
+
+
+var cloneGraph = function (node) {
+  let newGraph = {};
+
+  function cloneNode(node) {
+    if (!node) return null;
+    if (!newGraph[node.val]) {
+      newGraph[node.val] = new Node(node.val);
+      newGraph[node.val].neighbors = node.neighbors.map(ele => cloneNode(ele));
+    }
+
+    return newGraph[node.val];
+  }
+
+  return cloneNode(node);
+};
